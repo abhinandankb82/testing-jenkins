@@ -26,4 +26,14 @@ pipeline
             }
         }
     }
+	
+	post
+	{
+	    always
+		{
+		   emailext body: 'Status', subject: 'Jenkine_Pipeline_Handling_Failure', to: 'akb@csod.com'
+		}
+		
+	} 
+	
 }
